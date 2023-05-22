@@ -141,6 +141,61 @@ p {
   padding: 70px 0 0 0;
   background-color: #e1eff6;
 }
+
+/* PARALX HERO */
+
+.parallax-container {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+ }
+ .bgline2,
+ .bgportrait,
+ .bgline1 {
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 757px;
+    width: 100%;
+ }
+ .bgline2 {
+    background-image: background-image: url("images/bgline2.svg");
+    animation: move-bgline2 15s linear infinite;
+ }
+ .bgportrait {
+    background-image: url("images/bgportrait.png");
+    animation: move-bgportrait 20s linear infinite;
+ }
+ .bgline1 {
+    background-image: url("images/bgline1.svg");
+    animation: move-bgline1 25s linear infinite;
+ }
+ @keyframes move-bgline2 {
+    0% {
+       transform: translateX(0);
+    }
+    100% {
+       transform: translateX(-30%);
+    }
+ }
+ @keyframes move-bgportrait {
+    0% {
+       transform: translateX(0);
+    }
+    100% {
+       transform: translateX(-60%);
+    }
+ }
+ @keyframes move-bgline1 {
+    0% {
+       transform: translateX(0);
+    }
+    100% {
+       transform: translateX(-90%);
+    }
+ }
+
 .rawhero::after {
     content: "";
     display: table;
@@ -176,6 +231,17 @@ p {
     display: table;
     clear: both;
   }
+
+  .raw-solution {
+    background-image: url(images/solution.jpg);
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .raw3 {
     margin: 90px 0 90px 0;
     flex-direction: row;
@@ -191,7 +257,7 @@ p {
   }
 
 .title {
-  padding: 250px 200px 0 120px;
+  padding: 200px 200px 200px 900px;
 }
 
 .title2 {
@@ -273,7 +339,7 @@ p {
 /* MESSAGE */
 
 .title2 {
-    
+
 }
 
 /* UNDERSTAND-ADVISE-SHAPE */
@@ -301,7 +367,6 @@ p {
 /* SOLUTION */
 
 .dark{
-    background-color: #0f0f0f;
     color: #fff;
 }
 .it2 {
@@ -398,7 +463,14 @@ p {
 
 .lastbg {
   background-image: url("images/lastbg.jpg");
-}
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 .arrowdown{
     padding:170px 0;
 }
